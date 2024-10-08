@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Gaya Umum */
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #ffdbb5;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+img {
+  width: 150%;
+  max-width: 250px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.09rem;
+  font-weight: bold;
+  color: #f7f3e9;
+  transition: all 0.2s ease-in-out;
+}
+
+nav li:hover a {
+  background-color: #0047ab;
+  color: white;
+}
+
+/* menu togle */
+.menu-toggle {
+  display: none; /* Hide by default */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Layout menggunakan Flexbox */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  overflow: visible;
+}
+
+/* Main dan Aside */
+main {
+  flex: 2;
+  margin-right: 20px;
+}
+
+aside {
+  flex: 1;
+}
+
+/* Article */
+article {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+article h2 {
+  margin-top: 0;
+}
+/* Container untuk menu */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.menu-item {
+  background-color: #ffeac5;
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.menu-item h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.menu-item p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #777;
+}
+
+.menu-item .price {
+  font-size: 18px;
+  color: #e67e22;
+  font-weight: bold;
+}
+
+/* Contact us */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.contact-info div {
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact-details,
+.contact-form {
+  margin-bottom: 2rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ffeac5;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #ffeac5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0047ab;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Foto di Aside */
+.card {
+  background-color: #ffeac5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+aside h2 {
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+aside img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+aside p {
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  background-color: #ffdbb5;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  font-weight: bold;
+  margin: 10px;
+}
+
+/* Responsive Styles */
+
+/* Tablet & Mobile Styles */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: transparent;
+    position: space-between;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  img {
+    flex: 1;
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active + ul {
+    display: flex;
+  }
+}
+
+/* Menu untuk ukuran layar lebih kecil (toggle) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .menu-toggle.active + ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+/* Menu untuk ukuran layar lebih kecil (toggle) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+
+  .menu-toggle.active + ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
